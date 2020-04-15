@@ -22,7 +22,7 @@ background-color: white;
 font-size: 1.6rem;
 line-height: 1.35;
 display: grid;
-grid-template-columns: auto 95rem auto;
+grid-template-columns: auto 96rem auto;
 grid-template-rows: max-content max-content max-content max-content;
 grid-template-areas: 
 "header header header"
@@ -33,7 +33,7 @@ grid-template-areas:
 
 /* Links */
 a:link, a:visited {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     color: #65a2b6;
 }
 a:hover {
@@ -71,7 +71,7 @@ footer a:hover {
 header {
     grid-area: header;
     display: grid;
-    grid-template-columns: auto 95rem auto;
+    grid-template-columns: auto 96rem auto;
     /* background: linear-gradient(#397a82, #2e656b); */
     /* background: linear-gradient(0deg, #2d686f 0px, #368994 50px, #367a84 100px); */
     background: linear-gradient(0deg, #066972 0px, #077C85 55px);
@@ -114,7 +114,7 @@ header {
 .global-navigation {
     grid-area: global-nav;
     display: grid;
-    grid-template-columns: auto 95rem auto;
+    grid-template-columns: auto 96rem auto;
     border-top: 2px solid #777777;
     border-bottom: 2px solid #777777;
     box-shadow: 0 .4rem .1rem #ebebeb;
@@ -193,6 +193,7 @@ li.bullet::before {
 /* Aside */
 aside {
     flex: 1;
+    margin-right: 1rem;
 }
 .more-screenshots {
     text-align: right;
