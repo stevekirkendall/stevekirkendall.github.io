@@ -1,0 +1,231 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* Global styles */
+html {
+    font-size: 62.5%;;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html, body {
+    height: 100%;
+}
+body {
+font-family: "Helvetica", "Arial", sans-serif;
+color: #646d76;
+background-color: white;
+font-size: 1.6rem;
+line-height: 1.35;
+display: grid;
+grid-template-columns: auto 95rem auto;
+grid-template-rows: max-content max-content max-content max-content;
+grid-template-areas: 
+"header header header"
+"global-nav global-nav global-nav"
+". main ."
+". footer ."
+}
+
+/* Links */
+a:link, a:visited {
+    margin-right: 1.5rem;
+    color: #65a2b6;
+}
+a:hover {
+    color:#2e656b;
+}
+.nav-contents a:link, a:visited, a:hover,
+article li a:link, a:visited, a:hover {
+    font-weight: bold;
+}
+.nav-contents a:hover, article li a:hover {
+    margin-right: 1.5rem;
+}
+.article-nav a:link, .article-nav a:visited {
+    color: #646d76;
+    margin-right: 0;
+}
+.article-nav a:hover {
+    color: #2b2b2a;
+    font-weight: normal;
+}
+.branding a:link, a:visited, a:hover,
+aside a:link, a:visited, a:hover,
+footer a:link, a:visited, a:hover {
+    margin-right: 0;
+}
+.branding a:hover,
+aside a:hover,
+footer a:hover {
+    font-weight: normal;
+}
+
+/* Page structure */
+
+/* Header */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: auto 95rem auto;
+    /* background: linear-gradient(#397a82, #2e656b); */
+    /* background: linear-gradient(0deg, #2d686f 0px, #368994 50px, #367a84 100px); */
+    background: linear-gradient(0deg, #066972 0px, #077C85 55px);
+    height: 9rem;
+}
+.branding {
+    grid-column: 2/3;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 10rem;
+    padding-top: 2.1rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    color: white;
+}
+.logo img {
+    width: 5.7rem;
+    height: auto;
+    margin: -1.7rem 1rem 0 0;
+}
+.logo p {
+    font-size: 3.78rem;
+    margin: -2rem 0 0 0;
+}
+.reg {
+    font-size: 1rem;
+    vertical-align: 140%;
+    margin-right: .35rem;
+}
+.navigator {
+    color: #5EABB1;
+}
+
+/* Global Navigation */
+.global-navigation {
+    grid-area: global-nav;
+    display: grid;
+    grid-template-columns: auto 95rem auto;
+    border-top: 2px solid #777777;
+    border-bottom: 2px solid #777777;
+    box-shadow: 0 .4rem .1rem #ebebeb;
+}
+.nav-contents {
+    grid-column: 2/3;
+    grid-row: 2;
+    display: flex;
+    height: max-content;
+    justify-content: space-between;
+    margin: .5rem 0 .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Main section */
+main {
+    grid-area: main;
+    margin: 3.3rem 0 2.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Article */
+article {
+    flex: 2;
+    margin-right: 6rem;
+}
+h1 {
+    font-weight: normal;
+    font-size: 3rem;
+    color: #d98634;
+    margin-bottom: 0;
+}
+h4 { 
+    color: #2b2b2a;
+} 
+h4.grey { 
+    margin-bottom: .5rem;
+    color: #646d76;
+} 
+p.intro {
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+.article-nav {
+    margin: .5rem 0 4rem;
+    font-size: 1.3rem;
+}
+article ul {
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    list-style: none;
+}
+article ul li {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+article ul li img {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1rem;
+    margin-top: .3rem;
+}
+article ul li ul li {
+    margin-bottom: 0;
+}
+li.bullet::before {
+    content: "\2022";
+    font-size: 3rem;
+    color: #d98634;
+    margin-right: .5rem;
+    position: relative;
+}
+
+/* Aside */
+aside {
+    flex: 1;
+}
+.more-screenshots {
+    text-align: right;
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 3.75rem;
+}
+.more-screenshots span {
+    margin-left: .5rem;
+}
+.screenshot-gallery img {
+    margin-bottom: .9rem;
+}
+.callout-box {
+    display: flex;
+    padding: 1rem;
+    border: 2px solid #a4cbcc;
+    font-size: 1.3rem;
+}
+.callout-box-header {
+    font-weight: bold;
+    margin-bottom: .5rem;;
+}
+.callout-box img {
+    height: 3.2rem;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    border-top: 2px solid #a4cbcc;
+    padding-top: .9rem;
+    text-align: right;
+}
