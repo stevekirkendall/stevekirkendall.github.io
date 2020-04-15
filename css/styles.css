@@ -33,7 +33,7 @@ grid-template-areas:
 
 /* Links */
 a:link, a:visited {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     color: #65a2b6;
 }
 a:hover {
